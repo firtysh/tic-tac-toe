@@ -7,7 +7,8 @@
 nav {
     background-color: #000;
     color: rgb(255, 36, 146);
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'press start 2p';
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -103,7 +104,7 @@ nav ul {
     margin-right: 10px;
 }
 
-.reset {
+.reset, #restart {
     text-align: center;
     margin-top: 20px;
     background-color: #000;
@@ -114,8 +115,8 @@ nav ul {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.reset:hover {
-    border: 3px solid #000;
+.reset:hover, #restart:hover {
+    outline: 3px solid #000;
     background-color: rgb(255, 24, 113);
     cursor: pointer;
     color: #000;
@@ -135,5 +136,6 @@ nav ul {
     background-color: rgba(0, 0, 0, 0.658);
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     display: none;
 }

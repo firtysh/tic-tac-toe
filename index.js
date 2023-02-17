@@ -20,6 +20,7 @@ function checkWin() {
         console.log(slots[a].textContent, slots[b].textContent, slots[c].textContent);
         if (slots[a].textContent === slots[b].textContent && slots[c].textContent === slots[b].textContent && slots[a].textContent !== '' && slots[b].textContent !== '' && slots[c].textContent !== '') {
             slots[a].textContent === 'X' ? winner.innerHTML = '🎉 PLAYER 1 WON ! 🎉' : winner.innerHTML = '🎉 PLAYER 2 WON ! 🎉'
+            createRestartBtn();
             winner.style.display = 'flex'
         }
     })
@@ -51,3 +52,12 @@ slots.forEach(slot => {
     })
 })
 reset_button.addEventListener('click', reset);
+
+function createRestartBtn() {
+    winner.innerHTML += `<div id="restart">RESTART</div>`
+    const restart_button = document.querySelector('#restart');
+    restart_button.addEventListener('click', () =>  {
+        reset();
+        winner.style.display = 'none';
+    })
+}
